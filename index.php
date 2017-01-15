@@ -4,7 +4,11 @@
 	$num = implode(range('0','9'));
 	$sym = '$*?!-';
 	$chars = $lower.$upper.$num.$sym;
-
-	echo $chars;
-	echo '<br>';
+	
+	function rand_char($string){
+		$i = random_int(0,strlen($string)-1);
+		return $string[$i];
+	}
+	
+	echo rand_char($chars);
 ?>
